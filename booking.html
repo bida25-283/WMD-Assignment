@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransitBW - Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="TransitBW Logo">
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="routes.html">Route</a>
+                <a href="timetable.html">Timetable</a>
+                <a href="booking.html" class="active">Booking</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="text-content">
+                <h1>Book Your Seat</h1>
+                
+                <form action="#" method="post" class="booking-form">
+                    <label for="bus">Choose Bus:</label>
+                    <select id="bus" name="bus" required>
+                        <option value="">--Select Bus--</option>
+                        <option value="NKK001-8AM">NKK 001 - 8:00AM</option>
+                        <option value="NKK002-8AM">NKK 002 - 8:00AM</option>
+                        <option value="NKK003-9AM">NKK 003 - 9:00AM</option>
+                    </select>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <button type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+
+            <div class="image-content">
+            <img src="images/booking.png" alt="Booking Form Illustration">
+            </div>
+        </section>
+    </main>
+    <nav>
+        <button id="theme-toggle"> Dark Mode</button>
+    </nav>
+    <footer>
+        <h2>Francistown TransitBW</h2>
+        <p>Customer Service: +267 75803406</p>
+        <p>Email: info@francistowntransit.bw</p>
+        <p>Plot 123, Main  Mall, Francistown</p>
+    </footer>    
+    <script src="script.js"></script>
+</body>
+</html>

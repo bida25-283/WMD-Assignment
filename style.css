@@ -1,0 +1,297 @@
+/* === GLOBAL SETUP FOR ALL PAGES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background-color: white; /* White background only */
+    color: black; /* Black text only */
+}
+
+/* === HEADER - SAME ON ALL PAGES === */
+header {
+    background-color: #0066CC; /* Blue header */
+    padding: 15px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px; /* Your logo goes here */
+}
+
+nav a {
+    color: white; /* White text on blue header */
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+}
+
+nav a:hover, nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* === MAIN CONTENT - ALL PAGES === */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: black;
+}
+
+/* === HOME PAGE LAYOUT === */
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.hero-images img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #0066CC; /* Blue border */
+    border-radius: 5px;
+}
+
+/* === ROUTE, TIMETABLE, BOOKING, CONTACT LAYOUT === */
+.content-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.text-content {
+    flex: 1.2;
+}
+
+.image-content {
+    flex: 1;
+    border: 2px solid #0066CC; /* Blue border */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* === BUTTONS - BLUE FOR ALL PAGES === */
+.btn {
+    display: inline-block;
+    background-color: #0066CC; /* Blue button */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #004C99; /* Darker blue on hover */
+}
+
+/* === ROUTE PAGE BLOCKS === */
+.route-block {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 5px solid #0066CC; /* Blue accent */
+}
+
+/* === TIMETABLE PAGE TABLE === */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 30px 0;
+    border: 2px solid #0066CC; /* Blue border */
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #0066CC; /* Blue lines */
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    color: black;
+}
+
+.price-table th {
+    background-color: #0066CC; /* Blue header */
+    color: white;
+    font-weight: bold;
+}
+
+.price-table td {
+    background-color: white;
+}
+
+/* === BOOKING PAGE FORM === */
+.booking-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+.booking-form input, .booking-form select {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #0066CC; /* Blue border */
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+/* === CONTACT PAGE DETAILS === */
+.contact-details {
+    margin: 30px 0;
+}
+
+.contact-details p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.contact-details strong {
+    display: inline-block;
+    width: 80px;
+}
+
+/* === FOOTER - SAME ON ALL PAGES === */
+footer {
+    background-color: #0066CC; /* Blue footer */
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    color: white; /* White text on blue */
+}
+
+footer p {
+    margin: 5px 0;
+    color: white;
+}
+
+/* === PHONE VIEW - ALL PAGES === */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    
+    nav {
+        margin-top: 15px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+    }
+
+    .hero-section, .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-images {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .booking-form input, .booking-form select {
+        max-width: 100%;
+    }
+}
+
+/* === GLOBAL BODY SETUP === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s; /* Smooth theme switch */
+}
+
+/* === DARK MODE === */
+body.dark-mode {
+    background-color: #333333;
+    color: #f9f9f9;
+}
+
+body.dark-mode nav {
+    background-color: #222222;
+}
+
+body.dark-mode header {
+    background-color: #111111;
+}
+
+body.dark-mode footer {
+    background-color: #111111;
+    color: #f9f9f9;
+}
+
+body.dark-mode .btn {
+    background-color: #444444;
+    color: #f9f9f9;
+}
+
+/* === THEME TOGGLE BUTTON === */
+#theme-toggle {
+    padding: 8px 16px;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0066CC; /* Default blue */
+    color: white;
+    font-size: 16px;
+}
+
+#theme-toggle:hover {
+    background-color: #004C99; /* Darker blue on hover */
+}
+
